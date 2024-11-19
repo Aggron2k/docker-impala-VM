@@ -1,0 +1,32 @@
+catalogd:
+  image: apache/impala:4.4.1-impala_quickstart_hms
+  container_name: catalogd
+  environment:
+    - IMPALA_CATALOG_SERVICE_HOST=catalogd
+    - HIVE_METASTORE_URI=thrift://hive-metastore:9083
+  depends_on:
+    - hive-metastore
+  networks:
+    - hadoop
+
+statestored:
+  image: apache/impala:4.4.1-impala_quickstart_hms
+  container_name: statestored
+  networks:
+    - hadoop
+
+impalad:
+  image: apache/impala:4.4.1-impala_quickstart_hms
+  container_name: impalad
+  environment:
+    - CATALOGD_HOST=catalogd
+    - STATESTORE_HOST=statestored
+    - HIVE_METASTORE_URI=thrift://hive-metastore:9083
+  depends_on:
+    - catalogd
+    - statestored
+  ports:
+    - 21000:21000
+    - 21050:21050
+  networks:
+    - hadoop
