@@ -77,5 +77,12 @@ A HDFS-re felteszünk egy csv file-t amit importálunk a Hue -on keresztül és 
 ### Csv amit használni fogok:
 [addresses.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv)
 
+Új terminálban
+```
+[cloudera@quickstart ~]$ hadoop fs -put Downloads/addresses.csv /user/hue/mydata
+# Ellenőrzés hogy sikeres-e a file átpakolás
+hadoop fs -ls /user/hue/mydata
+```
+
 
 
