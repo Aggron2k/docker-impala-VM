@@ -27,9 +27,9 @@ Az Impala a Hive Metastore-t használja a táblák és a metaadatok kezelésére
 #### Impala Daemonok
 
 Az Impala saját komponensei, amelyeknek futniuk kell:
-Impala StateStore: A csomópontok közötti koordinációért felelős.
-Impala Catalog Server: A metaadatokat kezeli.
-Impala Server (Daemon): Maga az SQL-lekérdezéseket végrehajtó szolgáltatás.
+ - Impala StateStore: A csomópontok közötti koordinációért felelős.
+ - Impala Catalog Server: A metaadatokat kezeli.
+ - Impala Server (Daemon): Maga az SQL-lekérdezéseket végrehajtó szolgáltatás.
 
 #### ZooKeeper
 Az Impala és más Hadoop-komponensek koordinációjához szükséges (különösen nagyobb klaszterekben).
