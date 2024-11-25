@@ -44,7 +44,7 @@ Segít a Hadoop erőforrásainak kezelésében, és biztosítja a számítási k
 Egy böngésző-alapú interfész az adatok kezelésére és az Impala/Hive lekérdezések futtatására.
 
 
-# Hue
+# Hue / Impala használata
 https://quickstart.cloudera:8888
 
 A default adatbázisba tároljuk el az embereket
@@ -68,4 +68,15 @@ INSERT INTO default.peoples VALUES
 ```
 SELECT * FROM default.peoples;
 ```
+
+# Hue / HDFS / Impala használata
+
+## Cél:
+A HDFS-re felteszünk egy csv file-t amit importálunk a Hue -on keresztül és az Impala segítségével feldolgozzuk és táblát csinálunk belőle.
+
+Csv eredete:
+https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html
+[addresses.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv)
+
+
 
