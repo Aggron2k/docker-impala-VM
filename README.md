@@ -74,8 +74,7 @@ SELECT * FROM default.peoples;
 ## Cél:
 A HDFS-re felteszünk egy csv file-t amit importálunk a Hue -on keresztül és az Impala segítségével feldolgozzuk és táblát csinálunk belőle.
 
-Csv eredete:
-https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html
+### Csv amit használni fogok:
 [addresses.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv)
 
 
