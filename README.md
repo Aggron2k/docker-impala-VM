@@ -66,6 +66,6 @@ INSERT INTO default.peoples VALUES
 ```
 
 ```
-SELECT * FROM default.sample_data;
+SELECT * FROM default.peoples;
 ```
 
