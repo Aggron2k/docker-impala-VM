@@ -88,6 +88,31 @@ Ezt a hue felületén is le lehet tesztelni:
 Oldalt HDFS -> és navigáljunk a /user/hue-ra és a mydata néven mentett file a megfelelő file
 ![image](https://github.com/user-attachments/assets/e2690684-7e1a-4a90-870f-73db61b50080)
 
+### Csv hez tábla létrehozása:
+```
+CREATE TABLE default.addresses (
+    first_name STRING,
+    last_name STRING,
+    street STRING,
+    city STRING,
+    state STRING,
+    zip_code STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+```
+### Adatok importálása
+```
+LOAD DATA INPATH '/user/hue/mydata' INTO TABLE default.addresses;
+```
+### Read
+```
+SELECT * FROM default.addresses;
+```
+
+
 
 
 
