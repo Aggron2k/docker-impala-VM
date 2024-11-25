@@ -84,5 +84,11 @@ A HDFS-re felteszünk egy csv file-t amit importálunk a Hue -on keresztül és 
 hadoop fs -ls /user/hue/mydata
 ```
 
+Ezt a hue felületén is le lehet tesztelni:
+Oldalt HDFS -> és navigáljunk a /user/hue-ra és a mydata néven mentett file a megfelelő file
+![image](https://github.com/user-attachments/assets/e2690684-7e1a-4a90-870f-73db61b50080)
+
+
+
 
 
