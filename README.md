@@ -47,4 +47,25 @@ Egy böngésző-alapú interfész az adatok kezelésére és az Impala/Hive lek�
 # Hue
 https://quickstart.cloudera:8888
 
+A default adatbázisba tároljuk el az embereket
+```
+CREATE TABLE default.peoples (
+    id INT,
+    name STRING,
+    age INT,
+    country STRING
+)
+STORED AS PARQUET;
+```
+
+```
+INSERT INTO default.peoples VALUES
+(1, 'Alice', 30, 'USA'),
+(2, 'Bob', 25, 'UK'),
+(3, 'Charlie', 35, 'Canada');
+```
+
+```
+SELECT * FROM default.sample_data;
+```
 
