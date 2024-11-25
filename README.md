@@ -19,11 +19,11 @@ Password:cloudera
 #### HDFS (Hadoop Distributed File System)
 
 Az Impala az adatok olvasásához és írásához használja az HDFS-t.
-Ellenőrizd, hogy az HDFS elérhető és működik.
+
 #### Hive Metastore
 
 Az Impala a Hive Metastore-t használja a táblák és a metaadatok kezelésére.
-A hive-metastore és a hive-server2 szolgáltatásoknak futniuk kell.
+
 #### Impala Daemonok
 
 Az Impala saját komponensei, amelyeknek futniuk kell:
@@ -68,11 +68,13 @@ INSERT INTO default.peoples VALUES
 ```
 SELECT * FROM default.peoples;
 ```
+![image](https://github.com/user-attachments/assets/ceda88a2-03a8-4f3a-b620-a98ea96956a7)
+
 
 # Hue / HDFS / Impala használata
 
 ## Cél:
-A HDFS-re felteszünk egy csv file-t amit importálunk a Hue -on keresztül és az Impala segítségével feldolgozzuk és táblát csinálunk belőle.
+A HDFS-en keresztül felteszünk egy csv file-t amit importálunk a Hue -on és az Impala segítségével feldolgozzuk és táblát csinálunk belőle.
 
 ### Csv amit használni fogok:
 [addresses.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv)
@@ -111,6 +113,8 @@ LOAD DATA INPATH '/user/hue/mydata' INTO TABLE default.addresses;
 ```
 SELECT * FROM default.addresses;
 ```
+![image](https://github.com/user-attachments/assets/20a339a4-385a-4907-baf0-57d60950990c)
+
 
 
 
